@@ -25,6 +25,7 @@ export default function SecurityHomeScreen() {
         <button style={styles.button} onClick={() => handleNavigation('/scan-in')}>📥 Scan In</button>
         <button style={styles.button} onClick={() => handleNavigation('/scan-out')}>📤 Scan Out</button>
         <button style={styles.button} onClick={() => handleNavigation('/overdue-dashboard')}>⏰ Overdue Dashboard</button>
+        <p>Live Video feed will be fed to the model in the backend using RTSP URL</p>
       </div>
 
       <div style={styles.profile}>
