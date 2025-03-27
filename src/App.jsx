@@ -10,6 +10,9 @@ import GeneratePassScreen from './screens/GeneratePassScreen';
 import ScanInScreen from './screens/ScanInScreen';
 import ScanOutScreen from './screens/ScanOutScreen';
 import OverdueDashboard from './screens/OverdueDashboard';
+import SecurityVideosScreen from './screens/SecurityVideosScreen';
+import SecurityMapScreen from './screens/SecurityMapScreen';
+import TestModelScreen from './screens/TestModelScreen';
 
 function App() {
   return (
@@ -26,6 +29,9 @@ function App() {
         <Route path="/scan-in" element={<ScanInScreen />} />
         <Route path="/scan-out" element={<ScanOutScreen />} />
         <Route path="/overdue-dashboard" element={<OverdueDashboard />} />
+        <Route path="/clips" element={<SecurityVideosScreen />} />
+        <Route path="/sos-map" element={<SecurityMapScreen />} />
+        <Route path="/test-model" element={<TestModelScreen />} />
       </Routes>
     </Router>
   );
