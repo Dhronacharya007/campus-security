@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import VideoPlayer from '../components/VideoPlayer';
 // Backend API base URL
-const SERVER_URL = 'https://9c04-182-75-240-10.ngrok-free.app';
+const SERVER_URL = 'https://magnetic-spider-natural.ngrok-free.app';
 
 const SecurityVideosScreen = () => {
   const [clips, setClips] = useState([]);
