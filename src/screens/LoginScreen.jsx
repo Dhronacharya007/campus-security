@@ -52,7 +52,7 @@ export default function LoginScreen() {
         Sign In
       </button>
       <p style={{ marginTop: '1rem', color: '#ccc', cursor: 'pointer' }} onClick={() => navigate('/signup')}>Don’t have an account? Signup →</p>
-      <p> Security login Username: Security Password: 1234</p>
+      <p> Security login Username: security Password: 1234</p>
     </div>
   );
 }
