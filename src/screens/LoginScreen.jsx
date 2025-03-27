@@ -51,6 +51,7 @@ export default function LoginScreen() {
       <button style={styles.button} onClick={handleSignIn}>
         Sign In
       </button>
+      <p style={{ marginTop: '1rem', color: '#ccc', cursor: 'pointer' }} onClick={() => navigate('/signup')}>Don’t have an account? Signup →</p>
     </div>
   );
 }
