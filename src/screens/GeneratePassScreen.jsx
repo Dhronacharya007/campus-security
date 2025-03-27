@@ -30,16 +30,23 @@ export default function GeneratePassScreen() {
 
   const styles = {
     container: {
-      backgroundColor: '#121212',
-      color: '#eee',
-      padding: 20,
+      backgroundColor: '#000',
+      color: '#fff',
+      width: '100vw',
+      height: '100vh',
+      padding: '2rem',
+      display: 'flex',
+      justifyContent: 'center',
+      alignItems: 'center',
+    },
+    formBox: {
+      width: '100%',
       maxWidth: 500,
-      margin: '40px auto',
-      borderRadius: 8,
-      fontFamily: 'Arial, sans-serif',
+      display: 'flex',
+      flexDirection: 'column',
     },
     heading: {
-      fontSize: 22,
+      fontSize: 24,
       fontWeight: 'bold',
       color: '#4CAF50',
       marginBottom: 20,
@@ -47,19 +54,19 @@ export default function GeneratePassScreen() {
     },
     label: {
       fontSize: 16,
-      marginTop: 10,
+      marginBottom: 5,
     },
     input: {
       width: '100%',
       padding: 10,
-      marginTop: 5,
       marginBottom: 15,
       borderRadius: 5,
       border: '1px solid #4CAF50',
+      backgroundColor: '#111',
+      color: '#fff',
     },
     button: {
-      marginTop: 20,
-      width: '100%',
+      marginTop: 10,
       backgroundColor: '#4CAF50',
       color: '#fff',
       padding: 12,
@@ -72,47 +79,49 @@ export default function GeneratePassScreen() {
 
   return (
     <div style={styles.container}>
-      <h2 style={styles.heading}>Generate Visitor Pass</h2>
+      <div style={styles.formBox}>
+        <h2 style={styles.heading}>Generate Visitor Pass</h2>
 
-      <label style={styles.label}>Name</label>
-      <input
-        name="name"
-        value={form.name}
-        onChange={handleChange}
-        placeholder="Enter visitor name"
-        style={styles.input}
-      />
+        <label style={styles.label}>Name</label>
+        <input
+          name="name"
+          value={form.name}
+          onChange={handleChange}
+          placeholder="Enter visitor name"
+          style={styles.input}
+        />
 
-      <label style={styles.label}>Phone</label>
-      <input
-        name="phone"
-        value={form.phone}
-        onChange={handleChange}
-        placeholder="Enter phone number"
-        style={styles.input}
-      />
+        <label style={styles.label}>Phone</label>
+        <input
+          name="phone"
+          value={form.phone}
+          onChange={handleChange}
+          placeholder="Enter phone number"
+          style={styles.input}
+        />
 
-      <label style={styles.label}>In-Time (YYYY-MM-DD HH:MM)</label>
-      <input
-        name="in_time"
-        value={form.in_time}
-        onChange={handleChange}
-        placeholder="2025-03-26 14:30"
-        style={styles.input}
-      />
+        <label style={styles.label}>In-Time (YYYY-MM-DD HH:MM)</label>
+        <input
+          name="in_time"
+          value={form.in_time}
+          onChange={handleChange}
+          placeholder="2025-03-26 14:30"
+          style={styles.input}
+        />
 
-      <label style={styles.label}>Out-Time (YYYY-MM-DD HH:MM)</label>
-      <input
-        name="out_time"
-        value={form.out_time}
-        onChange={handleChange}
-        placeholder="2025-03-26 16:00"
-        style={styles.input}
-      />
+        <label style={styles.label}>Out-Time (YYYY-MM-DD HH:MM)</label>
+        <input
+          name="out_time"
+          value={form.out_time}
+          onChange={handleChange}
+          placeholder="2025-03-26 16:00"
+          style={styles.input}
+        />
 
-      <button onClick={generatePass} style={styles.button}>
-        Generate Pass
-      </button>
+        <button onClick={generatePass} style={styles.button}>
+          Generate Pass
+        </button>
+      </div>
     </div>
   );
 }
