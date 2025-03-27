@@ -36,13 +36,17 @@ export default function SecurityHomeScreen() {
 }
 
 const styles = {
-  container: {
-    padding: '2rem',
-    backgroundColor: '#121212',
-    minHeight: '100vh',
-    color: '#fff',
-    textAlign: 'center',
-  },
+    container: {
+        backgroundColor: '#000',
+        color: '#fff',
+        width: '100vw',
+        height: '100vh',
+        padding: '2rem',
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'center',
+        alignItems: 'center',
+      },
   heading: {
     fontSize: '2rem',
     marginBottom: '2rem',
