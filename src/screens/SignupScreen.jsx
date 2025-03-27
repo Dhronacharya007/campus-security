@@ -64,15 +64,17 @@ function SignupScreen() {
 }
 
 const styles = {
-  container: {
-    backgroundColor: '#121212',
-    padding: 20,
-    minHeight: '100vh',
-    display: 'flex',
-    flexDirection: 'column',
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
+    container: {
+        backgroundColor: '#000',
+        color: '#fff',
+        width: '100vw',
+        height: '100vh',
+        padding: '2rem',
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'center',
+        alignItems: 'center',
+      },
   title: {
     color: '#4CAF50',
     fontSize: 28,
