@@ -4,7 +4,7 @@ import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
 
 // Backend API base URL
-const SERVER_URL = 'https://9c04-182-75-240-10.ngrok-free.app';
+const SERVER_URL = 'https://magnetic-spider-natural.ngrok-free.app';
 
 // Fix Leaflet icon issue with Webpack/Vite
 delete L.Icon.Default.prototype._getIconUrl;
