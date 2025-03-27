@@ -6,7 +6,7 @@ function UserHomeScreen() {
   const [location, setLocation] = useState(null);
   const [loading, setLoading] = useState(true);
   const navigate = useNavigate();
-  const username = 'SampleUser'; // Replace with actual user state if needed
+  const username = 'SampleUser';
 
   useEffect(() => {
     navigator.geolocation.getCurrentPosition(
@@ -18,7 +18,7 @@ function UserHomeScreen() {
         setLoading(false);
       },
       (error) => {
-        alert('❌ Location access denied.');
+        alert('Location access denied.');
         setLoading(false);
       }
     );
@@ -26,7 +26,7 @@ function UserHomeScreen() {
 
   const handleSOS = async () => {
     if (!location) {
-      alert('❌ Location not available.');
+      alert('Location not available.');
       return;
     }
 
@@ -51,66 +51,68 @@ function UserHomeScreen() {
   const goToProfile = () => navigate('/user-profile');
 
   return (
-    <div style={styles.container}>
-      <button onClick={goToProfile} style={styles.profileButton}>
-        👤 Profile
-      </button>
-      <h2 style={styles.title}>User Home</h2>
-      {loading ? (
-        <p style={styles.text}>Fetching location...</p>
-      ) : (
-        <>
-          <p style={styles.text}>Latitude: {location.latitude}</p>
-          <p style={styles.text}>Longitude: {location.longitude}</p>
-          <button style={styles.sosButton} onClick={handleSOS}>
-            🚨 Send SOS
-          </button>
-        </>
-      )}
+    <div style={styles.fullscreen}>
+      <button onClick={goToProfile} style={styles.profileButton}>👤 Profile</button>
+      <div style={styles.centerBox}>
+        <h2 style={styles.title}>User Home</h2>
+        {loading ? (
+          <p>Fetching location...</p>
+        ) : (
+          <>
+            <p>Latitude: {location.latitude}</p>
+            <p>Longitude: {location.longitude}</p>
+            <button style={styles.button} onClick={handleSOS}>🚨 Send SOS</button>
+          </>
+        )}
+      </div>
     </div>
   );
 }
 
 const styles = {
-  container: {
+  fullscreen: {
     backgroundColor: '#000',
     color: '#fff',
-    minHeight: '100vh',
-    padding: '2rem',
+    width: '100vw',
+    height: '100vh',
+    position: 'relative',
     display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'center',
     justifyContent: 'center',
+    alignItems: 'center',
   },
   profileButton: {
     position: 'absolute',
-    top: '20px',
-    left: '20px',
-    fontSize: '18px',
-    backgroundColor: 'transparent',
-    border: '1px solid #fff',
-    color: '#fff',
-    padding: '8px 12px',
+    top: 20,
+    left: 20,
+    padding: '10px 15px',
+    fontSize: '16px',
     borderRadius: '8px',
+    backgroundColor: 'transparent',
+    color: '#fff',
+    border: '1px solid #ccc',
     cursor: 'pointer',
+  },
+  centerBox: {
+    textAlign: 'center',
+    padding: '2rem',
+    backgroundColor: '#121212',
+    borderRadius: '15px',
+    boxShadow: '0 0 10px rgba(255, 255, 255, 0.1)',
   },
   title: {
     fontSize: '2rem',
-    marginBottom: '2rem',
+    marginBottom: '1.5rem',
     color: '#4CAF50',
   },
-  text: {
-    fontSize: '1.2rem',
-    marginBottom: '10px',
-  },
-  sosButton: {
-    marginTop: '20px',
+  button: {
+    marginTop: '1.5rem',
     padding: '12px 24px',
-    fontSize: '1.1rem',
+    fontSize: '16px',
     backgroundColor: '#FF5252',
     color: '#fff',
+    fontWeight: 'bold',
     border: 'none',
-    borderRadius: '10px',
+    borderRadius: '8px',
     cursor: 'pointer',
   },
 };
