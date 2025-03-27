@@ -44,11 +44,16 @@ export default function SecurityMapScreen() {
 
   const styles = {
     container: {
-      padding: '1.5rem',
-      backgroundColor: '#121212',
-      color: '#fff',
-      minHeight: '100vh',
-    },
+        backgroundColor: '#000',
+        color: '#fff',
+        width: '100vw',
+        height: '100vh',
+        padding: '2rem',
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'center',
+        alignItems: 'center',
+      },
     heading: {
       fontSize: '1.8rem',
       color: '#4CAF50',
