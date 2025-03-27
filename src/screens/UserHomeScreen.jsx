@@ -6,7 +6,7 @@ function UserHomeScreen() {
   const [location, setLocation] = useState(null);
   const [loading, setLoading] = useState(true);
   const navigate = useNavigate();
-  const username = 'SampleUser'; // Replace with actual user context/state if needed
+  const username = 'SampleUser'; // Replace with actual user state if needed
 
   useEffect(() => {
     navigator.geolocation.getCurrentPosition(
@@ -18,7 +18,7 @@ function UserHomeScreen() {
         setLoading(false);
       },
       (error) => {
-        alert('Location access denied.');
+        alert('❌ Location access denied.');
         setLoading(false);
       }
     );
@@ -26,7 +26,7 @@ function UserHomeScreen() {
 
   const handleSOS = async () => {
     if (!location) {
-      alert('Location not available.');
+      alert('❌ Location not available.');
       return;
     }
 
@@ -57,12 +57,14 @@ function UserHomeScreen() {
       </button>
       <h2 style={styles.title}>User Home</h2>
       {loading ? (
-        <p>Fetching location...</p>
+        <p style={styles.text}>Fetching location...</p>
       ) : (
         <>
-          <p>Latitude: {location.latitude}</p>
-          <p>Longitude: {location.longitude}</p>
-          <button style={styles.button} onClick={handleSOS}>Send SOS</button>
+          <p style={styles.text}>Latitude: {location.latitude}</p>
+          <p style={styles.text}>Longitude: {location.longitude}</p>
+          <button style={styles.sosButton} onClick={handleSOS}>
+            🚨 Send SOS
+          </button>
         </>
       )}
     </div>
@@ -71,32 +73,44 @@ function UserHomeScreen() {
 
 const styles = {
   container: {
-    backgroundColor: '#f8f8f8',
+    backgroundColor: '#000',
+    color: '#fff',
     minHeight: '100vh',
-    padding: 20,
-    textAlign: 'center',
+    padding: '2rem',
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    justifyContent: 'center',
   },
   profileButton: {
     position: 'absolute',
-    top: 20,
-    left: 20,
-    fontSize: 20,
+    top: '20px',
+    left: '20px',
+    fontSize: '18px',
     backgroundColor: 'transparent',
-    border: 'none',
+    border: '1px solid #fff',
+    color: '#fff',
+    padding: '8px 12px',
+    borderRadius: '8px',
     cursor: 'pointer',
   },
   title: {
-    fontSize: 28,
-    marginBottom: 20,
+    fontSize: '2rem',
+    marginBottom: '2rem',
+    color: '#4CAF50',
   },
-  button: {
-    marginTop: 20,
-    padding: 12,
+  text: {
+    fontSize: '1.2rem',
+    marginBottom: '10px',
+  },
+  sosButton: {
+    marginTop: '20px',
+    padding: '12px 24px',
+    fontSize: '1.1rem',
     backgroundColor: '#FF5252',
-    color: 'white',
-    fontWeight: 'bold',
+    color: '#fff',
     border: 'none',
-    borderRadius: 8,
+    borderRadius: '10px',
     cursor: 'pointer',
   },
 };
