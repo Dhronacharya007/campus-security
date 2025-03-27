@@ -4,7 +4,7 @@ import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
 
 // Backend API base URL
-const SERVER_URL = 'https://b7cb-182-156-223-147.ngrok-free.app/sos-alerts';
+const SERVER_URL = 'https://9c04-182-75-240-10.ngrok-free.app';
 
 // Fix Leaflet icon issue with Webpack/Vite
 delete L.Icon.Default.prototype._getIconUrl;
