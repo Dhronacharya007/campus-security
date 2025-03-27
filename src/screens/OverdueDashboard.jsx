@@ -25,14 +25,16 @@ export default function OverdueDashboard() {
 
   const styles = {
     container: {
-      backgroundColor: '#121212',
-      color: '#eee',
-      padding: 20,
-      maxWidth: 600,
-      margin: '40px auto',
-      borderRadius: 8,
-      fontFamily: 'Arial, sans-serif',
-    },
+        backgroundColor: '#000',
+        color: '#fff',
+        width: '100vw',
+        height: '100vh',
+        padding: '2rem',
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'center',
+        alignItems: 'center',
+      },
     heading: {
       fontSize: 22,
       fontWeight: 'bold',
