@@ -49,12 +49,17 @@ export default function TestModelScreen() {
 }
 
 const styles = {
-  container: {
-    padding: '2rem',
-    backgroundColor: '#121212',
-    color: '#fff',
-    minHeight: '100vh',
-  },
+    container: {
+        backgroundColor: '#000',
+        color: '#fff',
+        width: '100vw',
+        height: '100vh',
+        padding: '2rem',
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'center',
+        alignItems: 'center',
+      },
   heading: {
     fontSize: '1.6rem',
     color: '#4CAF50',
