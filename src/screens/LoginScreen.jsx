@@ -52,22 +52,22 @@ export default function LoginScreen() {
         Sign In
       </button>
       <p style={{ marginTop: '1rem', color: '#ccc', cursor: 'pointer' }} onClick={() => navigate('/signup')}>Don’t have an account? Signup →</p>
-      <p>"Security login Username: security Password: 1234"</p>
     </div>
   );
 }
 
 const styles = {
-  container: {
-    backgroundColor: '#121212',
-    minHeight: '100vh',
-    color: '#fff',
-    display: 'flex',
-    flexDirection: 'column',
-    justifyContent: 'center',
-    alignItems: 'center',
-    padding: 20,
-  },
+    container: {
+        backgroundColor: '#000',
+        color: '#fff',
+        width: '100vw',
+        height: '100vh',
+        padding: '2rem',
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'center',
+        alignItems: 'center',
+      },
   heading: {
     marginBottom: 20,
     color: '#4CAF50',
