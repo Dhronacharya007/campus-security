@@ -66,10 +66,15 @@ const styles = {
     alignItems: 'center'
   },
   container: {
-    backgroundColor: '#121212',
-    minHeight: '100vh',
-    padding: '40px 20px',
-    color: '#fff'
+    backgroundColor: '#000',
+    color: '#fff',
+    width: '100vw',
+    height: '100vh',
+    padding: '2rem',
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'center',
+    alignItems: 'center',
   },
   title: {
     fontSize: '24px',
