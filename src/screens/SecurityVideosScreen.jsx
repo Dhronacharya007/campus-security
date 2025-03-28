@@ -4,32 +4,32 @@ import VideoPlayer from '../components/VideoPlayer';
 const dummyClips = [
   {
     filename: 'video1.mp4',
-    classification: 'abuse',
-    timestamp: 1743120000, // Mar 28, 2025 1:00 AM
+    classification: 'Abuse',
+    timestamp: 1743129000, // 28 Mar 2025, 1:30 AM
   },
   {
     filename: 'video2.mp4',
-    classification: 'violence',
-    timestamp: 1743130800, // Mar 28, 2025 4:00 AM
+    classification: 'Violence',
+    timestamp: 1743132600, // 28 Mar 2025, 2:30 AM
   },
   {
     filename: 'video3.mp4',
-    classification: 'violence',
-    timestamp: 1743134400, // Mar 28, 2025 5:00 AM
+    classification: 'Violence',
+    timestamp: 1743136200, // 28 Mar 2025, 3:30 AM
   },
   {
     filename: 'video4.mp4',
-    classification: 'vandalism',
-    timestamp: 1743127200, // Mar 28, 2025 3:00 AM
+    classification: 'Vandalism',
+    timestamp: 1743139800, // 28 Mar 2025, 4:30 AM
   },
   {
     filename: 'video5.mp4',
-    classification: 'vandalism',
-    timestamp: 1743138000, // Mar 28, 2025 6:00 AM
+    classification: 'Vandalism',
+    timestamp: 1743143400, // 28 Mar 2025, 5:30 AM
   },
 ];
 
-const SecurityVideosScreen = () => {
+export default function SecurityVideosScreen() {
   const [selectedClipUri, setSelectedClipUri] = useState(null);
 
   if (selectedClipUri) {
@@ -42,21 +42,23 @@ const SecurityVideosScreen = () => {
 
   return (
     <div style={styles.container}>
-      <h2 style={styles.title}>🎥 Detected Clips (Dummy)</h2>
-      {dummyClips.map((item, idx) => (
+      <h2 style={styles.title}>🎥 Detected Clips</h2>
+      {dummyClips.map((clip, idx) => (
         <div
           key={idx}
           style={styles.card}
-          onClick={() => setSelectedClipUri(`/clips/${item.filename}`)}
+          onClick={() => setSelectedClipUri(`/${clip.filename}`)} // video in public/
         >
-          <p style={styles.clipName}>{item.filename}</p>
-          <p style={styles.classification}>Type: {item.classification}</p>
-          <p style={styles.time}>📅 {new Date(item.timestamp * 1000).toLocaleString()}</p>
+          <p style={styles.clipName}>{clip.filename}</p>
+          <p style={styles.classification}>Type: {clip.classification}</p>
+          <p style={styles.time}>
+            📅 {new Date(clip.timestamp * 1000).toLocaleString()}
+          </p>
         </div>
       ))}
     </div>
   );
-};
+}
 
 const styles = {
   videoContainer: {
@@ -70,12 +72,12 @@ const styles = {
     backgroundColor: '#000',
     color: '#fff',
     width: '100vw',
-    minHeight: '100vh',
+    height: '100vh',
     padding: '2rem',
     display: 'flex',
     flexDirection: 'column',
-    justifyContent: 'center',
     alignItems: 'center',
+    overflowY: 'auto',
   },
   title: {
     fontSize: '24px',
@@ -91,7 +93,7 @@ const styles = {
     marginBottom: '10px',
     cursor: 'pointer',
     width: '80%',
-    maxWidth: '600px',
+    maxWidth: '500px',
   },
   clipName: {
     fontWeight: 'bold',
@@ -104,5 +106,3 @@ const styles = {
     marginTop: '4px',
   },
 };
-
-export default SecurityVideosScreen;
