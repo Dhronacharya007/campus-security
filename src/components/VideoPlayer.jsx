@@ -1,31 +1,65 @@
-import React from 'react';
+import React, { useRef } from 'react';
 
+// VideoPlayer Component
 export default function VideoPlayer({ clipUri, onBack }) {
+  const videoRef = useRef(null);
+
+  // Function to toggle fullscreen mode
+  const toggleFullScreen = () => {
+    if (videoRef.current) {
+      if (document.fullscreenElement) {
+        document.exitFullscreen();
+      } else if (videoRef.current.requestFullscreen) {
+        videoRef.current.requestFullscreen();
+      }
+    }
+  };
+
   return (
     <div style={styles.container}>
-      <video controls style={styles.video}>
+      {/* Video Element */}
+      <video ref={videoRef} controls style={styles.video}>
         <source src={clipUri} type="video/mp4" />
         Your browser does not support the video tag.
       </video>
-      <button onClick={onBack} style={styles.button}>Back</button>
+      {/* Controls */}
+      <div style={styles.controls}>
+        <button onClick={onBack} style={styles.button}>Back</button>
+        <button onClick={toggleFullScreen} style={styles.button}>Fullscreen</button>
+      </div>
     </div>
   );
 }
 
+// Styles
 const styles = {
   container: {
     backgroundColor: '#000',
-    textAlign: 'center',
-    paddingTop: '40px',
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    justifyContent: 'center',
+    height: '100vh',
+    width: '100vw',
+    position: 'relative',
   },
   video: {
-    width: '90%',
-    height: 'auto',
-    marginBottom: '20px',
+    width: '100%',
+    maxHeight: '90vh',
+    borderRadius: '8px',
+  },
+  controls: {
+    marginTop: '10px',
+    display: 'flex',
+    gap: '10px',
   },
   button: {
     padding: '10px 20px',
     fontSize: '16px',
     cursor: 'pointer',
+    backgroundColor: '#4CAF50',
+    color: '#fff',
+    border: 'none',
+    borderRadius: '5px',
   },
 };
