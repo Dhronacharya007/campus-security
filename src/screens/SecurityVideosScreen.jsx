@@ -25,12 +25,12 @@ const SecurityVideosScreen = () => {
     {
       filename: 'video1.mp4',
       classification: 'Type D',
-      timestamp: 1743127232,
+      timestamp: 1743119415,
     },
     {
       filename: 'video1.mp4',
       classification: 'Type E',
-      timestamp: 1743132826,
+      timestamp: 1743119529,
     },
   ];
 
