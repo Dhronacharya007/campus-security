@@ -13,13 +13,13 @@ const SecurityVideosScreen = () => {
       timestamp: 1743119426, // Example timestamp
     },
     {
-      filename: 'video1.mp4',
-      classification: 'Type B',
+      filename: 'video2.mp4',
+      classification: 'Violence',
       timestamp: 1743123397,
     },
     {
-      filename: 'video1.mp4',
-      classification: 'Type C',
+      filename: 'video3.avi',
+      classification: 'Vandalism',
       timestamp: 1743123456,
     },
     {
