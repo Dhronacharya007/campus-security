@@ -3,11 +3,6 @@ import VideoPlayer from './VideoPlayer';
 
 const dummyClips = [
   {
-    filename: 'video1.mp4',
-    classification: 'Abuse',
-    timestamp: 1743104857, // 28 Mar 2025, 1:30 AM
-  },
-  {
     filename: 'video2.mp4',
     classification: 'Violence',
     timestamp: 1743107437, // 28 Mar 2025, 2:30 AM
@@ -27,6 +22,11 @@ const dummyClips = [
     classification: 'Vandalism',
     timestamp: 1743116497, // 28 Mar 2025, 5:30 AM
   },
+  {
+    filename: 'video1.mp4',
+    classification: 'Abuse',
+    timestamp: 1743104857, // 28 Mar 2025, 1:30 AM
+  }
 ];
 
 export default function SecurityVideosScreen() {
