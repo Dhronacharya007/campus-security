@@ -9,26 +9,26 @@ const SecurityVideosScreen = () => {
   const clips = [
     {
       filename: 'video1.mp4',
-      classification: 'Type A',
+      classification: 'Abuse',
       timestamp: 1743123000, // Example timestamp
     },
     {
-      filename: 'video2.mp4',
+      filename: 'video1.mp4',
       classification: 'Type B',
       timestamp: 1743209400,
     },
     {
-      filename: 'video3.mp4',
+      filename: 'video1.mp4',
       classification: 'Type C',
       timestamp: 1743295800,
     },
     {
-      filename: 'video4.mp4',
+      filename: 'video1.mp4',
       classification: 'Type D',
       timestamp: 1743382200,
     },
     {
-      filename: 'video5.mp4',
+      filename: 'video1.mp4',
       classification: 'Type E',
       timestamp: 1743468600,
     },
