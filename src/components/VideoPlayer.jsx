@@ -34,15 +34,16 @@ export default function VideoPlayer({ clipUri, onBack }) {
 // Styles
 const styles = {
   container: {
-    backgroundColor: '#000',
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'center',
-    justifyContent: 'center',
-    height: '100vh',
-    width: '100vw',
-    position: 'relative',
-  },
+        backgroundColor: '#000',
+        color: '#fff',
+        width: '100vw',
+        height: '100vh',
+        padding: '2rem',
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'center',
+        alignItems: 'center',
+      },
   video: {
     width: '100%',
     maxHeight: '90vh',
