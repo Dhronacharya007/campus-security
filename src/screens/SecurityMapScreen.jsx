@@ -20,7 +20,7 @@ export default function SecurityMapScreen() {
     {
       id: 1,
       username: 'User A',
-      timestamp: 1672527600,
+      timestamp: 1743123500,
       location: {
         latitude: 12.944255350057654,
         longitude: 77.69394167802636,
