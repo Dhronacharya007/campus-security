@@ -29,7 +29,7 @@ export default function SecurityMapScreen() {
     {
       id: 2,
       username: 'User B',
-      timestamp: 1672531200,
+      timestamp: 1743123000,
       location: {
         latitude: 12.945,
         longitude: 77.694,
@@ -38,7 +38,7 @@ export default function SecurityMapScreen() {
     {
       id: 3,
       username: 'User C',
-      timestamp: 1672534800,
+      timestamp: 1752446300,
       location: {
         latitude: 11.0804, // Vellakinar, Coimbatore
         longitude: 76.9947,
@@ -47,7 +47,7 @@ export default function SecurityMapScreen() {
     {
       id: 4,
       username: 'User D',
-      timestamp: 1672538400,
+      timestamp: 1752446600,
       location: {
         latitude: 11.0183, // Avinashi Road, Coimbatore
         longitude: 76.9747,
