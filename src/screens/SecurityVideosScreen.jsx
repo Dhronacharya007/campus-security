@@ -18,18 +18,18 @@ const SecurityVideosScreen = () => {
       timestamp: 1743123397,
     },
     {
-      filename: 'video3.avi',
-      classification: 'Vandalism',
+      filename: 'video3.mp4',
+      classification: 'Violence',
       timestamp: 1743123456,
     },
     {
-      filename: 'video1.mp4',
-      classification: 'Type D',
+      filename: 'video4.mp4',
+      classification: 'Vandalism',
       timestamp: 1743119415,
     },
     {
-      filename: 'video1.mp4',
-      classification: 'Type E',
+      filename: 'video5.mp4',
+      classification: 'Vandalism',
       timestamp: 1743119529,
     },
   ];
